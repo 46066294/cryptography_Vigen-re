@@ -7,7 +7,7 @@
 <body>
     <h1>Decrypt Vigenère</h1>
     <p>Encrypted message:</p>
-    <textarea id="inputData" cols="50" rows="4" type="text" size="100" height="20">LXFOPVEFRNHR</textarea><br>
+    <textarea id="inputData" cols="50" rows="4" type="text" size="100" height="20">Apxqem eo vcwo nil hrumo dy fonyko scfdly fwehmfam jie imfam oscyl bom aocy ecs xbos xbtiwbzem.</textarea><br>
     <p>Key:
         <input id="inputPass" type="text" size="60"  value="LEMONLEMONLE"/><br>
     </p>
@@ -54,8 +54,14 @@
         var pass = p.value.toUpperCase();
 
         //key modification
-        pass = pass.concat(pass).concat(pass).concat(pass).concat(pass).concat(pass);
+        pass = pass.concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass);
+        pass = pass.concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass);
+        pass = pass.concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass).concat(pass);
+
         var arrayEncrypt = data.split("");
+        /*for(var v = 0; v < arrayEncrypt.length; v++){
+            pass = pass.concat(pass);
+        }*/
         var utilPass = pass.substring(0, arrayEncrypt.length);
         var clave = utilPass.split("");
 
@@ -99,6 +105,7 @@
         }
 
         console.log(row);
+        console.log("--Pass: " + p.value);
         console.log("\n\nDECRYPT TEXT:\n\t" + decrypt);
 
         document.getElementById("showdecr").innerHTML = decrypt;
